@@ -1,0 +1,5 @@
+mod customer_info_read_request;
+mod customer_info_read_response;
+
+pub use customer_info_read_request::CustomerInfoReadRequest;
+pub use customer_info_read_response::CustomerInfoReadResponse;

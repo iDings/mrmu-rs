@@ -1,0 +1,24 @@
+[package]
+name = "mrmu"
+version = "0.0.1"
+edition = "2021"
+description = "rmu tool for marvell 88Q5151/88Q5152/88Q5192"
+
+[profile.release]
+opt-level = 'z' # Optimize for size
+lto = true
+codegen-units = 1
+strip = true  # Automatically strip symbols from the binary.
+
+[dependencies]
+libc = "0.2.150"
+socket2 = { version = "0.5.7", features = ["all"] }
+mac_address = "1.1.7"
+clap = { version = "4.5.16", features = ["derive"] }
+clap-num = "1.1.1"
+anyhow = "1.0.91"
+smol = "2.0.2"
+bit_ops = "0.1.13"
+num-traits = "0.2.19"
+strum = { version = "0.26.3", features = ["derive"] }
+strum_macros = "0.26.4"
